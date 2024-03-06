@@ -1,0 +1,29 @@
+<script type="text/javascript">
+  RED.nodes.registerType('cpu-temperature',{
+      category: 'inputs',
+      color: '#FF5733',
+      defaults: {
+          name: { value: "" }
+      },
+      inputs: 1,
+      outputs: 1,
+      icon: "cpu.svg",
+      label: function() {
+          return this.name || "CPU температура";
+      }
+  });
+</script>
+
+<script type="text/html" data-template-name="cpu-temperature">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Ім'я</label>
+    <input type="text" id="node-input-name" placeholder="Ім'я" />
+  </div>
+  <div class="form-tips" style="font-size:83%">
+    Визначає температуру процесора.
+  </div>
+</script>
+
+<script type="text/html" data-help-name="cpu-temperature">
+  <p>Простий вузол, що визначає температуру процесора.</p>
+</script>
